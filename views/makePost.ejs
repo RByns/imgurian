@@ -1,0 +1,17 @@
+<script type="text/ng-template" id="/makePost.html">
+  <div class="container">
+    <div class="text-center" id="intro-container">
+      <div ng-show="error" class="alert">
+        <span>{{ error.message }}</span>
+      </div>
+      <p>
+        Please fill in all fields to make a post!
+      </p>
+       <form ng-submit="vm.addPost(post)" class="form" id="post-form">
+        <input class="form-input" type="text" ng-model="post.title" placeholder="Title" required="" /><br/>
+        <input class="form-input" type="text" ng-model="post.imageUrl" placeholder="ImageUrl" required="" /><br/><br/>
+        <button type="submit" class="btn">Create post</button>
+       </form>
+    </div>
+  </div>
+</script>

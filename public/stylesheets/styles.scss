@@ -1,0 +1,197 @@
+@import 'mixins';
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* imgurian */
+body {
+	height: 100vh;
+	background-color: $black;
+	color: #fff;
+	font-family: 'Source Sans Pro', sans-serif;
+
+	@include create-flex();
+
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+::selection {
+  background: $gray; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $gray; /* Gecko Browsers */
+}
+
+p {
+	font-size: 24px;
+	margin: 20px 0px;
+}
+
+img {
+	@include nodragselect;
+	width: 100%;
+}
+
+.content {
+	display: block;
+	background-color: $black;
+	overflow-y: auto;
+	max-height: calc(100vh - #{$nav-height});
+	width: 100%;
+	margin-top: $nav-height;
+	padding: 20px;
+
+	&::-webkit-scrollbar{
+		width:16px;
+	}
+
+	&::-webkit-scrollbar-thumb{
+		background:rgba(34,34,35,0.1);
+		border-radius:10px;
+	}
+
+	&::-webkit-scrollbar-track{
+		border-radius:10px;
+		-webkit-box-shadow:0 0 6px gray inset;
+	}
+
+}
+
+.btn {
+	color: #fff;
+	padding: 5px 15px;
+	margin: 10px;
+	background-color: none;
+	background:none;
+    box-shadow:none;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	font-size: 24px;
+	outline : 0;
+	-moz-outline : 0;
+	cursor: pointer;
+	text-decoration: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	transition-property: background-color, border-color;
+	transition-duration: 0.15s;
+
+	&:hover {
+		color: #fff;
+		border: 2px solid #ff5a6e;
+		background-color: #ff5a6e;
+	}
+
+
+	&:focus {
+		color: #fff;
+		outline: none;
+	}
+
+	&:active:focus {
+		color: #fff;
+		background-color: #ff0000;
+		outline: none;
+	}
+}
+
+#intro-logo {
+	display: inline-block;
+	max-width: 380px;
+	padding: 30px;
+	vertical-align: middle;
+}
+
+#intro-info {
+	display: inline-block;
+	max-width: 480px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 50px;
+	vertical-align: middle;
+}
+
+.text-center {
+	text-align: center;
+}
+
+
+main {
+	transition: all ease 1.5s;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+
+	&.ng-enter {
+    	opacity: 0;
+	}
+
+	&.ng-enter-active {
+		opacity: 1;
+	}
+
+	&.ng-leave {
+		transition: none;
+		//opacity: 1;
+	}
+
+	&.ng-leave-active {
+		//opacity: 0;
+	}
+}
+
+.form-input {
+	margin: 0px 20px 20px 20px;
+	padding: 10px;
+	background: none !important;
+	border-radius: 10px;
+	border: 2px solid #fff;
+	color: #fff;
+	outline: none;
+
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  color: #4b875a;
+	}
+	&::-moz-placeholder { /* Firefox 19+ */
+	  color: #4b875a;
+	}
+	&:-ms-input-placeholder { /* IE 10+ */
+	  color: #4b875a;
+	}
+	&:-moz-placeholder { /* Firefox 18- */
+	  color: #4b875a;
+	}
+}
+
+.alert {
+	background-color: $gray;
+	padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+	from {top:-300px; opacity:0}
+	to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+	from {top:-300px; opacity:0}
+	to {top:0; opacity:1}
+}

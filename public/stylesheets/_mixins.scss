@@ -1,0 +1,43 @@
+@mixin mr($margin) {
+  margin-right: $margin;
+  &:last-child, &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@mixin ml($margin) {
+  margin-left: $margin;
+  &:last-child, &:last-of-type {
+    margin-left: 0;
+  }
+}
+
+@mixin mt($margin) {
+  margin-top: $margin;
+  &:last-child, &:last-of-type {
+    margin-top: 0;
+  }
+}
+
+@mixin mb($margin) {
+  margin-bottom: $margin;
+  &:last-child, &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+@mixin nodragselect {
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+@mixin create-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}

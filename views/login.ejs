@@ -1,0 +1,17 @@
+<script type="text/ng-template" id="/login.html">
+  <div class="container">
+    <div class="text-center" id="intro-container">
+      <div ng-show="error" class="alert">
+        <span>{{ error.message }}</span>
+      </div>
+      <p>
+        Please fill in your account information to log in.
+      </p>
+       <form ng-submit="logIn()" class="form" id="login-form">
+        <input class="form-input" type="text" ng-model="user.username" placeholder="username" required="" /><br/>
+        <input class="form-input" type="password" ng-model="user.password" placeholder="password" required="" /><br/><br/>
+        <button type="submit" class="btn">Log in</button>
+       </form>
+    </div>
+  </div>
+</script>

@@ -1,0 +1,101 @@
+@import 'variables';
+@import 'mixins';
+
+.posts {
+	max-width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+
+	h1 {
+		margin-bottom: 20px;
+	}
+
+	.post {
+		background: $lightest-grey;
+		border-radius: 20px;
+		padding: 20px;
+		margin-bottom: 30px;
+
+		.post-img {
+			width: 300px;
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		.vote-img {
+			width: 25px;
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		article {
+			color: #50545C;
+			display: inline-block;
+			vertical-align: top;
+			padding-left: 20px;
+			max-width: 550px;
+
+			h1 {
+				font-size: 20px;
+			}
+
+			p {
+				font-size: 16px;
+			}
+		}
+
+		.btn {
+			color: $darker-black;
+			border: none;
+			background-color: transparent;
+			font-size: 16px;
+			padding: 3px 8px;
+			vertical-align: middle;
+			transition-property: background-color, color;
+			transition-duration: 500ms;
+			border-radius: 0;
+			border-bottom: 1px solid $black;
+			border-top: 1px solid $black;
+
+			&:hover {
+				color: white;
+				background-color: $darker-black;
+			}
+		}
+
+		.rating-box {
+			float: left;
+			position: relative;
+			bottom: 0;
+			right: 0;
+
+			input[type="radio"] {
+		    	display:none;
+
+				&:checked ~ label::before {
+					color: $gray;
+				}
+			}
+
+			span {
+				display: inline-block;
+				background-color: transparent;
+
+				&::before {
+					content: "\2605";
+					font-size: 28px;
+					color: $light-grey;
+				}
+
+				&.fill::before {
+					color: $gray;
+				}
+			}
+
+			.rating-labels {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+}

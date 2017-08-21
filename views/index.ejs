@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Imgurian</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet">
+    <!-- CSS -->
+    <link href="stylesheets/styles.css" rel="stylesheet" type="text/css" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular-animate.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngInfiniteScroll/1.3.0/ng-infinite-scroll.js"></script>
+
+    <script src="/js/main.js"></script>
+    <script src="/node_modules/angular-clipboard/angular-clipboard.js"></script>
+    <!-- authentication -->
+    <script src="/js/authentication/auth-module.js"></script>
+    <script src="/js/authentication/auth-factory.js"></script>
+    <script src="/js/authentication/auth-controller.js"></script>
+    <script src="/js/nav/nav-module.js"></script>
+    <script src="/js/nav/nav-controller.js"></script>
+    <script src="/js/data/data-factory.js"></script>
+    <script src="/js/posts/posts-module.js"></script>
+    <script src="/js/posts/posts-factory.js"></script>
+    <script src="/js/posts/posts-controller.js"></script>
+
+  </head>
+  <body ng-app="imgurian">
+    <% include navigation %>
+    <main ui-view></main>
+  <% include home %>
+  <% include login-or-register %>
+  <% include login %>
+  <% include register %>
+  <% include posts %>
+  <% include makePost %>
+  </body>
+</html>

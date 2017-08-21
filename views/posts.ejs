@@ -1,0 +1,25 @@
+<script type="text/ng-template" id="/posts.html">
+	<div class="content">
+		<div class="posts">
+			<h1> Browse all the posts! </h1>
+		    <div infinite-scroll="vm.loadPosts()" infinite-scroll-disabled="vm.isLoadingposts" infinite-scroll-distance='0' infinite-scroll-container="'.content'">
+		        <div class="post" ng-repeat="post in vm.posts">
+		            <img ng-src="{{post.imageUrl}}" alt="image of post" class="post-img" />
+								<article>
+									<h1>{{post.title}}</h1>
+									<p>Posted by: {{post.author}}</p>
+									<p>Upvotes: {{post.upvotes}}</p>
+								</article>
+		            <div style='clear: both;'></div>
+		            <div class="rating-box">
+									<button type="submit" class="btn" ng-click="vm.deletePost(post)">Delete</button>
+									<button type="submit" class="btn" ng-click="vm.upvotePost(post)">Upvote</button>
+									<button type="submit" class="btn" ng-click="vm.downvotePost(post)">Downvote</button>
+				    		</div>
+		        	<div style='clear: both;'></div>
+		    	</div>
+		    </div>
+		    <div ng-show="vm.isLoadingPosts">Loading more posts...</div>
+	    </div>
+    </div>
+</script>

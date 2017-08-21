@@ -1,0 +1,18 @@
+<script type="text/ng-template" id="/register.html">
+  <div class="container">
+    <div class="text-center" id="intro-container">
+      <div ng-show="error" class="alert">
+        <span>{{ error.message }}</span>
+      </div>
+      <p>
+        Fill in your details to make a new account.
+      </p>
+      <form ng-submit="register()" class="form" id="register-form">
+        <input class="form-input" type="text" ng-model="user.username" placeholder="username" /><br/>
+        <input class="form-input" type="password" ng-model="user.password" placeholder="password" required="" /><br/>
+        <input class="form-input" type="password" ng-model="user.password2" placeholder="password confirmation" required="" /><br/><br/>
+        <button type="submit" class="btn">Register</button>
+      </form>
+    </div>
+  </div>
+</script>
