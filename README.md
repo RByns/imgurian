@@ -1,10 +1,9 @@
 # imgurian app: an app inspired by imgur!
 
 Run the following commands to run for yourself:
-  npm install
-  npm -g install gulp
-  npm install mocha chai
-  npm install supertest
+  npm install,
+  npm -g install gulp,
+  npm install mocha chai.
 
 Run npm start to begin
 Run npm start to run tests
