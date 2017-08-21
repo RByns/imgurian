@@ -8,4 +8,4 @@ Run the following commands to run for yourself:
 Run npm start to begin.
 Run npm test to run tests
 
-Open http://localhost:3000 on a browser
+Open http://localhost:3000 on a browser or go to http://imgurian.herokuapp.com to use the online version!
